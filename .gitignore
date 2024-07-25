@@ -1,5 +1,22 @@
-# django admin files
-/manage.py
+# Python
+*.pyc
+*~
+__pycache__
+
+
+# local test database
+db.sqlite3
+
+
+# Static folder at project root
+/static/
+
+
+# VSCode
+.vscode/
+.history/
+*.code-workspace
+
 
 # random
 .old/
