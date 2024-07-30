@@ -18,7 +18,11 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
+    # django admin app
     path('admin/', admin.site.urls),
+    # homepage and root to static pages app
+    path('', include("pages.urls")),
+    path("blog/", include("blog.urls")),
     path("polls/", include("polls.urls")),
     path('members/', include('members.urls')),
 ]

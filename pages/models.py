@@ -1,3 +1,3 @@
 from django.db import models
 
-# Create your models here.
+# This stays blank in this app or you've done it wrong
