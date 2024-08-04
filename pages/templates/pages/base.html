@@ -8,9 +8,15 @@
 
     </head>
 
+    <header>
+        {% block header %}
+            <a href="{% url 'home' %}">Home</a> | <a href="{% url 'about'%}">About</a>
+        {% endblock header %}
+    </header>
     <body>
 
         <div id="sidebar">
+
             {% block sidebar %}
             <ul>
                 <li><a href="/">Home</a></li>
@@ -19,6 +25,18 @@
             {% endblock sidebar %}
 
         </div>
+
+        <div id="content">
+
+            {% block content %}{% endblock content %}
+        </div>
 	
     </body>
+    <footer>
+        {% block footer %}
+        <p>page links:</p>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about/">About</a></li>
+        {% endblock footer %}
+    </footer>
 </html>
