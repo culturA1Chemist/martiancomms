@@ -1,9 +1,10 @@
+{% load static %}
 <!doctype html>
 <html lang="en-US">
     <head>
 
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="{% static 'pages/style.css' %}">
         <title>{% block page_title %}static pages app{% endblock page_title %}</title>
 
     </head>
@@ -19,8 +20,8 @@
 
             {% block sidebar %}
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about/">About</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about'%}">About</a></li>
             </ul>
             {% endblock sidebar %}
 
@@ -35,8 +36,8 @@
     <footer>
         {% block footer %}
         <p>page links:</p>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about/">About</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about'%}">About</a></li>
         {% endblock footer %}
     </footer>
 </html>
