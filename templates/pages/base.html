@@ -1,5 +1,13 @@
 {% extends "pages/base.html" %}
 
-{% block title %}
+{% block page_title %}
+    mcllc designs
+{% endblock page_title %}
+
+{% block header %}
+    {{ block.super }} | <a href="{% url 'members' %}">Members</a>
+{% endblock header %}
+
+{% block sidebar %}
     {{ block.super }}
-{% endblock title %}
+{% endblock sidebar %}

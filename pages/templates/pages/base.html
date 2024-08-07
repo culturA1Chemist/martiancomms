@@ -29,15 +29,17 @@
 
         <div id="content">
 
-            {% block content %}{% endblock content %}
+            {% block content %}the good stuff goes here ^_^{% endblock content %}
         </div>
 	
     </body>
     <footer>
         {% block footer %}
-        <p>page links:</p>
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'about'%}">About</a></li>
+        <ul>
+            <li>site links</li>
+            <li>logos and affiliates</li>
+            <li>etc</li>
+        </ul>
         {% endblock footer %}
     </footer>
 </html>
